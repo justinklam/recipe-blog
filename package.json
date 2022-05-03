@@ -2,9 +2,9 @@
   "name": "recipe-blog",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/justinklam/recipe-blog#readme",
   "description": "",
-
   "dependencies": {
     "connect-flash": "^0.1.1",
     "dotenv": "^16.0.0",
@@ -28,5 +27,8 @@
     "express-session": "^1.17.2",
     "mongodb": "^4.5.0",
     "mongoose": "^6.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
