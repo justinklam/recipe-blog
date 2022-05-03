@@ -3,7 +3,6 @@ const expressLayouts = require("express-ejs-layouts");
 
 const app = express();
 const port = normalizePort(process.env.PORT || "3000");
-console.log(process.env.PORT);
 
 require("dotenv").config();
 
@@ -13,6 +12,7 @@ app.use(express.static("public")); // for static files
 app.use(expressLayouts);
 
 app.set("layout", "./layouts/main");
+app.set("view engine", "ejs");
 
 // routes
 const routes = require("./server/routes/recipeRoutes.js");
