@@ -19,7 +19,7 @@ const routes = require("./server/routes/recipeRoutes.js");
 app.use("/", routes);
 
 app.listen(port, () =>
-  console.log(`Recipe-blog is listening on Port:${port} 🐯`)
+  console.log(`Recipe Repo is listening on Port:${port} 🐯`)
 );
 
 function normalizePort(val) {

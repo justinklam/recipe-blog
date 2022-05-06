@@ -4,5 +4,5 @@
  */
 
 exports.homepage = async (req, res) => {
-  res.render("index", {title: 'Recipe Blog - Home'});
+  res.render("index", {title: 'Recipe Repo - Home'});
 };
