@@ -35,7 +35,7 @@
         </ul>
 
         <div class="col-md-3 text-end">
-          <form action="/search">
+          <form method="POST" action="/search">
             <input type="search" name="searchTerm" class="form-control" placeholder="Search..." aria-label="Search">
           </form>
         </div>
@@ -44,6 +44,10 @@
       <main>
         <%- body -%>
       </main>
+
+      <footer class="py-5">
+        <a href="https://github.com/justinklam">Built by Justin</a>
+      </footer>
       
     </div>>
 

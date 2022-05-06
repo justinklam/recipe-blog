@@ -1,3 +1,16 @@
+:root {
+  --bs-font-sans-serif: 'Rubik', sans-serif;
+}
+
+.container-xxl{ 
+  max-width: 1530px
+}
+
 body {
-  background-color: black;
+  background-image: url("/img/food-background.jpg");
+  background-color: rgb(240, 240, 240);
+}
+
+a {
+  color: var(--bs-dark);
 }
