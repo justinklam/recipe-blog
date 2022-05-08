@@ -15,7 +15,12 @@ exports.homepage = async (req, res) => {
     // locate Category from database
     const categories = await Category.find({}).limit(limitNumber);
 
-    res.render("index", {title: 'Recipe Repo - Home', categories});
+    // locate latest recipes
+    const latest = await Recipe.find({}).sort({_id: -1}).limit(5);
+
+    const food = { latest };
+
+    res.render("index", {title: 'Recipe Repo - Home', categories, food});
   } catch(error) {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
