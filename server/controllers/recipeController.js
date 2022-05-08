@@ -55,6 +55,25 @@ exports.homepage = async (req, res) => {
   }
 };
 
+/**
+ * GET /recipe/id
+ * Recipe
+ */
+
+ exports.exploreRecipe = async (req, res) => {
+  try {
+
+    // to get the recipe id
+    let recipeId = req.params.id;
+    
+    const recipe = await Recipe.findById(recipeId);
+
+    res.render("recipe", {title: 'Recipe Repo - Recipe', recipe});
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
+};
+
 // Dummy Data
 
 // async function insertDummyCategoryData() {
