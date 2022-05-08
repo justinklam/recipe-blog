@@ -43,12 +43,20 @@ exports.homepage = async (req, res) => {
 //   try {
 //     await Category.insertMany([
 //   {
+//     "name": "American",
+//     "image": "food-american.jpg"
+//   },
+//   {
 //     "name": "Chinese",
 //     "image": "food-chinese.jpg"
 //   },
 //   {
 //     "name": "French",
 //     "image": "food-french.jpg"
+//   },
+//   {
+//     "name": "Indian",
+//     "image": "food-indian.jpg"
 //   },
 //   {
 //     "name": "Italian",
