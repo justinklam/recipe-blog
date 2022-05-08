@@ -50,40 +50,16 @@
 
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
 
-    <a href="/recipe/#" class="col text-center category__link">
-      <div class="category__img category__img--large shadow">
-        <img src="img/waffles.jpg" alt="Waffles with Fruit" loading="lazy">
-      </div>
-      <div class="pt-1">Waffles with Fruit</div>
-    </a>
-
-    <a href="/recipe/#" class="col text-center category__link">
-      <div class="category__img category__img--large shadow">
-        <img src="img/pork-dumplings.jpg" alt="Pork Dumplings" loading="lazy">
-      </div>
-      <div class="pt-1">Pork Dumplings</div>
-    </a>
-
-    <a href="/recipe/#" class="col text-center category__link">
-      <div class="category__img category__img--large shadow">
-        <img src="img/strawberry-crepe.jpg" alt="Strawberry Crepes" loading="lazy">
-      </div>
-      <div class="pt-1">Strawberry Crepes</div>
-    </a>
-
-    <a href="/recipe/#" class="col text-center category__link">
-      <div class="category__img category__img--large shadow">
-        <img src="img/tacos-beef.jpg" alt="Beef Tacos" loading="lazy">
-      </div>
-      <div class="pt-1">Beef Tacos</div>
-    </a>
-
-    <a href="/recipe/#" class="col text-center category__link">
-      <div class="category__img category__img--large shadow">
-        <img src="img/spring-rolls-shrimp.jpg" alt="Fresh Rolls with Shrimp" loading="lazy">
-      </div>
-      <div class="pt-1">Fresh Rolls with Shrimp</div>
-    </a>
+    <% if(food != '') { %>
+    <% food.latest.forEach(function(recipe, index){ %>
+      <a href="/recipe/<%- recipe._id %>" class="col text-center category__link">
+        <div class="category__img category__img--large shadow">
+          <img src="img/<%- recipe.image %>" alt="<%- recipe.name %>" loading="lazy">
+        </div>
+        <div class="pt-1"><%- recipe.name %></div>
+      </a>
+      <% }) %>
+    <% } %>
 
   </div>
 

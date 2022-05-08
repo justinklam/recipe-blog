@@ -18,6 +18,7 @@ exports.homepage = async (req, res) => {
     // locate latest recipes
     const latest = await Recipe.find({}).sort({_id: -1}).limit(5);
 
+    // passing latest as a food object
     const food = { latest };
 
     res.render("index", {title: 'Recipe Repo - Home', categories, food});
