@@ -39,6 +39,8 @@ exports.homepage = async (req, res) => {
   }
 };
 
+// Dummy Data
+
 // async function insertDummyCategoryData() {
 //   try {
 //     await Category.insertMany([
@@ -85,3 +87,43 @@ exports.homepage = async (req, res) => {
 // };
 
 // insertDummyCategoryData();
+
+async function insertDummyRecipeData(){
+  try {
+    await Recipe.insertMany([
+      { 
+        "name": "Waffles",
+        "description": `Waffles`,
+        "email": "user@email.com",
+        "ingredients": [
+          '2ggs',
+          '2 cups all-purpose flour', 
+          '1 3/4 cups milk',
+          '1/2 cup vegetable oil',
+          '1 tablespoon white sugar',
+          '4 teaspoons baking powder',
+          '1/4 teaspoon salt',
+          '1/2 teaspoon vanilla extract'
+        ],
+        "category": "American", 
+        "image": "waffles.jpg"
+      },
+      { 
+        "name": "Dumplings",
+        "description": `Recipe Description Goes Here`,
+        "email": "user@email.com",
+        "ingredients": [
+          "1 level teaspoon baking powder",
+          "1 level teaspoon cayenne pepper",
+          "1 level teaspoon hot smoked paprika",
+        ],
+        "category": "Chinese", 
+        "image": "dumplings.jpg"
+      },
+    ]);
+  } catch(error) {
+    console.log('Error', + error);
+  }
+};
+
+// insertDummyRecipeData();
