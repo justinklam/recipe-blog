@@ -18,8 +18,18 @@ exports.homepage = async (req, res) => {
     // locate latest recipes
     const latest = await Recipe.find({}).sort({_id: -1}).limit(5);
 
-    // passing latest as a food object
-    const food = { latest };
+    // locate by category
+    const american = await Recipe.find({ 'category': 'American'}).limit(limitNumber);
+    const chinese = await Recipe.find({ 'category': 'Chinese'}).limit(limitNumber);
+    const french = await Recipe.find({ 'category': 'French'}).limit(limitNumber);
+    const indian = await Recipe.find({ 'category': 'Indian'}).limit(limitNumber);
+    const japanese = await Recipe.find({ 'category': 'Japanese'}).limit(limitNumber);
+    const mexican = await Recipe.find({ 'category': 'Mexican'}).limit(limitNumber);
+    const spanish = await Recipe.find({ 'category': 'Spanish'}).limit(limitNumber);
+    const vietnamese = await Recipe.find({ 'category': 'Vietnamese'}).limit(limitNumber);
+
+    // passing latest query as a food object
+    const food = { latest, american, chinese, french, indian, japanese, mexican, spanish, vietnamese };
 
     res.render("index", {title: 'Recipe Repo - Home', categories, food});
   } catch(error) {
