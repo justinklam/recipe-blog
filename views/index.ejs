@@ -19,54 +19,16 @@
 
 <div class="row row-cols-2 rows-cols-lg-6 g-2 g-lg-3 py-4">
 
-  <a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-      <img src="img/food-chinese.jpg" alt="Chinese" loading="lazy">
-    </div>
-    <div class="pt-1">Chinese</div>
-  </a>
-
-  <a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-      <img src="img/food-french.jpg" alt="French" loading="lazy">
-    </div>
-    <div class="pt-1">French</div>
-  </a>
-
-  <a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-      <img src="img/food-italian.jpg" alt="Italian" loading="lazy">
-    </div>
-    <div class="pt-1">Italian</div>
-  </a>
-
-  <a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-      <img src="img/food-japanese.jpg" alt="Japanese" loading="lazy">
-    </div>
-    <div class="pt-1">Japanese</div>
-  </a>
-
-  <a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-      <img src="img/food-mexican.jpg" alt="Mexican" loading="lazy">
-    </div>
-    <div class="pt-1">Mexican</div>
-  </a>
-
-  <a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-      <img src="img/food-spanish.jpg" alt="Spanish" loading="lazy">
-    </div>
-    <div class="pt-1">Spanish</div>
-  </a>
-
-  <a href="#" class="col text-center category__link">
-    <div class="category__img shadow">
-      <img src="img/food-vietnamese.jpg" alt="Vietnamese" loading="lazy">
-    </div>
-    <div class="pt-1">Vietnamese</div>
-  </a>
+  <% if(categories != '')  {%>
+    <% categories.forEach(function(category, index){ %>
+      <a href="#" class="col text-center category__link">
+        <div class="category__img shadow">
+          <img src="img/<%- category.image %>" alt="<%- category.name %>" loading="lazy">
+        </div>
+        <div class="pt-1"><%- category.name %></div>
+      </a>
+    <% }) %>
+  <% } %>
 
   <a href="/categories" class="col text-center category__link">
     <div class="category__img shadow">
