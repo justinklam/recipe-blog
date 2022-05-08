@@ -6,9 +6,26 @@ const Category = require('../models/Category')
  * Homepage
  */
 
-
-
 exports.homepage = async (req, res) => {
+  try {
+    // number of categories to render
+    const limitNumber = 7;
+
+    // locate Category from database
+    const categories = await Category.find({}).limit(limitNumber);
+
+    res.render("index", {title: 'Recipe Repo - Home', categories});
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
+};
+
+/**
+ * GET /categories
+ * Categories
+ */
+
+ exports.exploreCategories = async (req, res) => {
   try {
     // number of categories to render
     const limitNumber = 7;
