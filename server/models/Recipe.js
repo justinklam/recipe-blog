@@ -13,6 +13,10 @@ const recipeSchema = new mongoose.Schema({
     type: Array,
     required: [true, 'This field is required']
   },
+  directions: {
+    type: Array,
+    required: [true, 'This field is required']
+  },
   category: {
     // Array causes error
     type: String,

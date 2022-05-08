@@ -105,20 +105,41 @@ async function insertDummyRecipeData(){
           '1/4 teaspoon salt',
           '1/2 teaspoon vanilla extract'
         ],
-        "category": "American", 
+        "directions": 
+          ['Preheat waffle iron. Beat eggs in large bowl with hand beater until fluffy. Beat in flour, milk, vegetable oil, sugar, baking powder, salt and vanilla, just until smooth.',
+          'Spray preheated waffle iron with non-stick cooking spray. Pour mix onto hot waffle iron. Cook until golden brown. Serve hot.'
+          ],
+        "category": "American",
         "image": "waffles.jpg"
       },
       { 
-        "name": "Dumplings",
-        "description": `Recipe Description Goes Here`,
+        "name": "Pork Dumpling",
+        "description": `Chinese Pork Dumplings`,
         "email": "user@email.com",
         "ingredients": [
-          "1 level teaspoon baking powder",
-          "1 level teaspoon cayenne pepper",
-          "1 level teaspoon hot smoked paprika",
+          '½ cup soy sauce',
+          '1 tablespoon seasoned rice vinegar',
+          '1 tablespoon finely chopped Chinese chives',
+          '1 tablespoon sesame seeds',
+          '1 teaspoon chile-garlic sauce (such as Sriracha®)',
+          '1 pound ground pork',
+          '3 cloves garlic, minced',
+          '1 large egg, beaten',
+          '2 tablespoons finely chopped Chinese chives',
+          '2 tablespoons soy sauce',
+          '1 ½ tablespoons sesame oil',
+          '1 tablespoon minced fresh ginger',
+          '50 dumpling wrappers',
+          '1 cup vegetable oil for frying',
+          '1 quart water, or more as needed'
         ],
-        "category": "Chinese", 
-        "image": "dumplings.jpg"
+        "directions": 
+          ['Combine 1/2 cup soy sauce, rice vinegar, 1 tablespoon chives, sesame seeds, and chile sauce in a small bowl. Set aside.',
+          'Mix pork, garlic, egg, 2 tablespoons chives, soy sauce, sesame oil, and ginger in a large bowl until thoroughly combined. Place a dumpling wrapper on a lightly floured work surface and spoon about 1 tablespoon of the filling in the middle. Wet the edge with a little water and crimp together forming small pleats to seal the dumpling. Repeat with remaining dumpling wrappers and filling.',
+          'Heat 1 to 2 tablespoons vegetable oil in a large skillet over medium-high heat. Place 8 to 10 dumplings in the pan and cook until browned, about 2 minutes per side. Pour in 1 cup of water, cover and cook until the dumplings are tender and the pork is cooked through, about 5 minutes. Repeat for remaining dumplings. Serve with soy sauce mixture for dipping.'
+          ],
+        "category": "Chinese",
+        "image": "pork-dumplings.jpg"
       },
     ]);
   } catch(error) {
