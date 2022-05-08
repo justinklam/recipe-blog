@@ -27,13 +27,12 @@ exports.homepage = async (req, res) => {
 
  exports.exploreCategories = async (req, res) => {
   try {
-    // number of categories to render
-    const limitNumber = 7;
+    const limitNumber = 20;
 
     // locate Category from database
     const categories = await Category.find({}).limit(limitNumber);
 
-    res.render("index", {title: 'Recipe Repo - Home', categories});
+    res.render("categories", {title: 'Recipe Repo - Categories', categories});
   } catch(error) {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
@@ -67,8 +66,8 @@ exports.homepage = async (req, res) => {
 //     "image": "food-spanish.jpg"
 //   },
 //   {
-//     "name": "Vietnamnese",
-//     "image": "food-vietnamnese.jpg"
+//     "name": "Vietnamese",
+//     "image": "food-vietnamese.jpg"
 //   },
 // ]);
 //   } catch(error) {
