@@ -18,7 +18,13 @@
   <div class="col-12 col-md-8">
     <div class="row">
       <div class="col-12"><h1><%- recipe.name %></h1></div>
+      <div class="col-12 mb-4"><%- recipe.description %></div>
       <div class="col-12 mb-4"><i class="bi bi-tag"></i><%- recipe.category %></div>
+      <!-- add in white space to avoid spacing issues -->
+      <div class="col-12" style="white-space: pre-line;">
+        <h4>Directions</h4>
+        <%- recipe.directions %>
+      </div>
     </div>
   </div>
 
