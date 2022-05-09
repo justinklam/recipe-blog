@@ -65,7 +65,7 @@ exports.homepage = async (req, res) => {
 
     // to get the recipe id
     let recipeId = req.params.id;
-    
+    // query through id
     const recipe = await Recipe.findById(recipeId);
 
     res.render("recipe", {title: 'Recipe Repo - Recipe', recipe});
