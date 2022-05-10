@@ -33,4 +33,9 @@ const recipeSchema = new mongoose.Schema({
   },
 });
 
+// index the name/description for the search query
+recipeSchema.index({name: 'text', description: 'text'});
+// WildCard Indexing - to search the entire recipe
+// recipeSchema.index({"$**": 'text'});
+
 module.exports = mongoose.model('Recipe', recipeSchema);
