@@ -93,3 +93,14 @@ exports.homepage = async (req, res) => {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
 };
+
+/**
+ * POST /search
+ * Search
+ */
+
+ exports.searchRecipe = async (req, res) => {
+
+  res.render("search", {title: 'Recipe Repo - Search', recipe});
+
+};
