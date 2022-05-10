@@ -56,6 +56,26 @@ exports.homepage = async (req, res) => {
 };
 
 /**
+ * GET /categories/:id
+ * Categories by ID
+ */
+
+ exports.exploreCategoriesById = async (req, res) => {
+  try {
+    let categoryId = req.params.id;
+
+    const limitNumber = 20;
+
+    // locate Category from database
+    const categoriesById = await Category.find({ 'category': categoryId }).limit(limitNumber);
+
+    res.render("categories", {title: 'Recipe Repo - Categories', categoriesById});
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
+};
+
+/**
  * GET /recipe/id
  * Recipe
  */
