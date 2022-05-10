@@ -131,13 +131,12 @@ exports.homepage = async (req, res) => {
 };
 
 /**
- * GET /recipe/id
- * Recipe
+ * GET /submit-recipe
+ * Submit Recipe
  */
 
  exports.submitRecipe = async (req, res) => {
   try {
-
 
     res.render("submit-recipe", {title: 'Recipe Repo - Submit Recipe'});
   } catch(error) {
