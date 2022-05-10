@@ -94,6 +94,24 @@ exports.homepage = async (req, res) => {
 };
 
 /**
+ * GET /explore-random
+ * Explore Random
+ */
+
+ exports.exploreRandom = async (req, res) => {
+  try {
+    let count = await Recipe.find().countDocuments();
+    let random = Math.floor(Math.random() * count);
+    // query for one receipe, skip to the random number generated above
+    let recipe = await Recipe.findOne().skip(random).exec();
+
+    res.render("explore-random", {title: 'Recipe Repo - Explore Latest', recipe});
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
+};
+
+/**
  * GET /recipe/id
  * Recipe
  */
