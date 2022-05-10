@@ -100,6 +100,21 @@ exports.homepage = async (req, res) => {
  */
 
  exports.searchRecipe = async (req, res) => {
+  try {
+    // req.body coming from the search form
+    let searchTerm = req.body.searchTerm;
+
+    // $text text search with text index
+    // $search MongoDB parses and uses to query the text index
+    let recipe = await Recipe.find(
+      { $text: { 
+        $search: searchTerm, 
+        $diacriticSensitive: true
+      }});
+
+  } catch(error) {
+
+  }
 
   res.render("search", {title: 'Recipe Repo - Search'});
 
