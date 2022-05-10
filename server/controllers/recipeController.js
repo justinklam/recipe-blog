@@ -77,6 +77,21 @@ exports.homepage = async (req, res) => {
 };
 
 /**
+ * GET /explore-latest
+ * Explore Latest
+ */
+
+ exports.exploreLatest = async (req, res) => {
+  try {
+    const limitNumber = 20;
+
+    res.render("explore-latest", {title: 'Recipe Repo - Explore Latest'});
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
+};
+
+/**
  * GET /recipe/id
  * Recipe
  */
