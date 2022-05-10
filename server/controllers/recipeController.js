@@ -49,6 +49,7 @@ exports.homepage = async (req, res) => {
     // locate Category from database
     const categories = await Category.find({}).limit(limitNumber);
 
+    // passing on the query results-categories into the render below
     res.render("categories", {title: 'Recipe Repo - Categories', categories});
   } catch(error) {
     res.status(500).send({message: error.message || 'Error Occured'});
@@ -112,10 +113,9 @@ exports.homepage = async (req, res) => {
         $diacriticSensitive: true
       }});
 
+    res.render("search", {title: 'Recipe Repo - Search', recipe});
   } catch(error) {
-
+    res.status(500).send({message: error.message || 'Error Occured'});
   }
-
-  res.render("search", {title: 'Recipe Repo - Search'});
 
 };
