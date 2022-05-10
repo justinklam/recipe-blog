@@ -101,6 +101,6 @@ exports.homepage = async (req, res) => {
 
  exports.searchRecipe = async (req, res) => {
 
-  res.render("search", {title: 'Recipe Repo - Search', recipe});
+  res.render("search", {title: 'Recipe Repo - Search'});
 
 };
