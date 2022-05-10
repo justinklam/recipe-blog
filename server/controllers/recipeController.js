@@ -105,7 +105,7 @@ exports.homepage = async (req, res) => {
     // query for one receipe, skip to the random number generated above
     let recipe = await Recipe.findOne().skip(random).exec();
 
-    res.render("explore-random", {title: 'Recipe Repo - Explore Latest', recipe});
+    res.render("explore-random", {title: 'Recipe Repo - Explore Random', recipe});
   } catch(error) {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
@@ -125,6 +125,21 @@ exports.homepage = async (req, res) => {
     const recipe = await Recipe.findById(recipeId);
 
     res.render("recipe", {title: 'Recipe Repo - Recipe', recipe});
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
+};
+
+/**
+ * GET /recipe/id
+ * Recipe
+ */
+
+ exports.submitRecipe = async (req, res) => {
+  try {
+
+
+    res.render("submit-recipe", {title: 'Recipe Repo - Submit Recipe'});
   } catch(error) {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
