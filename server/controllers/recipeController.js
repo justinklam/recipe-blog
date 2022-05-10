@@ -87,7 +87,7 @@ exports.homepage = async (req, res) => {
     // locate latest recipes
     const recipe = await Recipe.find({}).sort({_id: -1}).limit(limitNumber);
 
-    res.render("explore-latest", {title: 'Recipe Repo - Explore Latest', explore});
+    res.render("explore-latest", {title: 'Recipe Repo - Explore Latest', recipe});
   } catch(error) {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
