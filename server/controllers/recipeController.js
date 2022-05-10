@@ -66,10 +66,10 @@ exports.homepage = async (req, res) => {
 
     const limitNumber = 20;
 
-    // locate Category from database
-    const categoriesById = await Category.find({ 'category': categoryId }).limit(limitNumber);
+    // locate recipes by category from database
+    const categoryById = await Recipe.find({ 'category': categoryId }).limit(limitNumber);
 
-    res.render("categories", {title: 'Recipe Repo - Categories', categoriesById});
+    res.render("categories", {title: 'Recipe Repo - Categories', categoryById});
   } catch(error) {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
