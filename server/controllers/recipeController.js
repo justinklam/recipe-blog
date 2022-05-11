@@ -42,7 +42,7 @@ exports.homepage = async (req, res) => {
  * Categories
  */
 
- exports.exploreCategories = async (req, res) => {
+exports.exploreCategories = async (req, res) => {
   try {
     const limitNumber = 20;
 
@@ -61,7 +61,7 @@ exports.homepage = async (req, res) => {
  * Categories by ID
  */
 
- exports.exploreCategoriesById = async (req, res) => {
+exports.exploreCategoriesById = async (req, res) => {
   try {
     let categoryId = req.params.id;
 
@@ -81,7 +81,7 @@ exports.homepage = async (req, res) => {
  * Explore Latest
  */
 
- exports.exploreLatest = async (req, res) => {
+exports.exploreLatest = async (req, res) => {
   try {
     const limitNumber = 20;
     // locate latest recipes
@@ -98,7 +98,7 @@ exports.homepage = async (req, res) => {
  * Explore Random
  */
 
- exports.exploreRandom = async (req, res) => {
+exports.exploreRandom = async (req, res) => {
   try {
     let count = await Recipe.find().countDocuments();
     let random = Math.floor(Math.random() * count);
@@ -116,9 +116,8 @@ exports.homepage = async (req, res) => {
  * Recipe
  */
 
- exports.exploreRecipe = async (req, res) => {
+exports.exploreRecipe = async (req, res) => {
   try {
-
     // to get the recipe id
     let recipeId = req.params.id;
     // query through id
@@ -135,9 +134,8 @@ exports.homepage = async (req, res) => {
  * Submit Recipe
  */
 
- exports.submitRecipe = async (req, res) => {
+exports.submitRecipe = async (req, res) => {
   try {
-
     res.render("submit-recipe", {title: 'Recipe Repo - Submit Recipe'});
   } catch(error) {
     res.status(500).send({message: error.message || 'Error Occured'});
@@ -149,7 +147,7 @@ exports.homepage = async (req, res) => {
  * Search
  */
 
- exports.searchRecipe = async (req, res) => {
+exports.searchRecipe = async (req, res) => {
   try {
     // req.body coming from the search form
     let searchTerm = req.body.searchTerm;
@@ -167,4 +165,17 @@ exports.homepage = async (req, res) => {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
 
+};
+
+/**
+ * POST /submit-recipe
+ * SubmitRecipe
+ */
+
+exports.submitRecipeOnPost = async (req, res) => {
+  try {
+    res.redirect('submit-recipe');
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
 };

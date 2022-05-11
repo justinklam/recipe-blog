@@ -15,5 +15,6 @@ router.get('/recipe/:id', recipeController.exploreRecipe);
 router.get('/submit-recipe', recipeController.submitRecipe);
 
 router.post('/search', recipeController.searchRecipe);
+router.post('/submit-recipe', recipeController.submitRecipeOnPost);
 
 module.exports = router;
