@@ -143,6 +143,19 @@ exports.submitRecipe = async (req, res) => {
 };
 
 /**
+ * POST /submit-recipe
+ * SubmitRecipe
+ */
+
+exports.submitRecipeOnPost = async (req, res) => {
+  try {
+    res.redirect('/submit-recipe');
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
+};
+
+/**
  * POST /search
  * Search
  */
@@ -165,17 +178,4 @@ exports.searchRecipe = async (req, res) => {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
 
-};
-
-/**
- * POST /submit-recipe
- * SubmitRecipe
- */
-
-exports.submitRecipeOnPost = async (req, res) => {
-  try {
-    res.redirect('submit-recipe');
-  } catch(error) {
-    res.status(500).send({message: error.message || 'Error Occured'});
-  }
 };
