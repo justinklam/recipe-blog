@@ -14,7 +14,16 @@ require("dotenv").config();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public")); // for static files
 app.use(expressLayouts);
+app.use(cookieParser('RecipeRepoSecure'));
+app.use(session({
+  secret: 'RecipeRepoSecretSession',
+  saveUninitialized: true,
+  resave: true
+}));
+app.use(flash());
+app.use(fileUpload());
 
+// views
 app.set("layout", "./layouts/main");
 app.set("view engine", "ejs");
 
