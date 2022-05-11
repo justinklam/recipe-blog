@@ -11,7 +11,6 @@
     <form action="/submit-recipe" enctype="multipart/form-data" method="POST">
 
       <div class="row g-3">
-
         
         <div class="col-12">
           <label for="name" class="form-label">Recipe Name</label>
@@ -20,7 +19,7 @@
         
         <div class="col-12">
           <label for="description" class="form-label">Description</label>
-          <textarea name="description" id="description" cols="30" rows="4"></textarea>
+          <textarea name="description" class="form-control" id="description" cols="30" rows="4"></textarea>
         </div>
 
         <div class="col-12">
@@ -40,7 +39,7 @@
         <div class="col-12">
           <label for="category">Select Category</label>
           <select class="form-select form-control" name="category" aria-label="Category">
-            <option selected >Select Category</option>
+            <option selected>Category</option>
             <option value="American">American</option>
             <option value="Chinese">Chinese</option>
             <option value="French">French</option>
@@ -62,6 +61,10 @@
         <div class="col-12">
           <label for="email" class="form-label">Email</label>
           <input type="email" name="email" id="email">
+        </div>
+        
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Submit Recipe</button>
         </div>
 
       </div>
