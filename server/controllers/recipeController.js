@@ -149,8 +149,15 @@ exports.submitRecipe = async (req, res) => {
  */
 
 exports.submitRecipeOnPost = async (req, res) => {
-  req.flash('infoSubmit', 'Recipe has been added!')
-  res.redirect('/submit-recipe');
+  
+  try {
+    req.flash('infoSubmit', 'Recipe has been added!')
+    res.redirect('/submit-recipe');
+  } catch (error) {
+    req.flash('infoErrors', error)
+    res.redirect('/submit-recipe');
+  }
+
 };
 
 /**
