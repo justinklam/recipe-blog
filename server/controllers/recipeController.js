@@ -135,11 +135,12 @@ exports.exploreRecipe = async (req, res) => {
  */
 
 exports.submitRecipe = async (req, res) => {
-  try {
-    res.render("submit-recipe", {title: 'Recipe Repo - Submit Recipe'});
-  } catch(error) {
-    res.status(500).send({message: error.message || 'Error Occured'});
-  }
+  // this will hold all the error messages we display to the user
+  const infoErrorsObj = req.flash('infoErrors');
+  // on success message
+  const infoSubmitObj = req.flash('infoSubmit');
+
+  res.render("submit-recipe", {title: 'Recipe Repo - Submit Recipe', infoErrorsObj, infoSubmitObj});
 };
 
 /**
@@ -148,11 +149,8 @@ exports.submitRecipe = async (req, res) => {
  */
 
 exports.submitRecipeOnPost = async (req, res) => {
-  try {
-    res.redirect('/submit-recipe');
-  } catch(error) {
-    res.status(500).send({message: error.message || 'Error Occured'});
-  }
+  req.flash('infoSubmit', 'Recipe has been added!')
+  res.redirect('/submit-recipe');
 };
 
 /**
