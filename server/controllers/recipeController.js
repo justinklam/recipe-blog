@@ -149,8 +149,22 @@ exports.submitRecipe = async (req, res) => {
  */
 
 exports.submitRecipeOnPost = async (req, res) => {
-  
   try {
+
+    const newRecipe = new Recipe({
+      // using the name from the field in submit-recipe
+      name: req.body.name,
+      description: req.body.description,
+      ingredients: req.body.ingredients,
+      directions: req.body.direction,
+      category: req.body.category,
+      image: 'view-all.jpg', // placeholder
+      email: req.body.email,
+    });
+
+    // saves to database
+    await newRecipe.save();
+
     req.flash('infoSubmit', 'Recipe has been added!')
     res.redirect('/submit-recipe');
   } catch (error) {
