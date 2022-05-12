@@ -1,4 +1,5 @@
 require ('../models/database');
+const res = require('express/lib/response');
 const Category = require('../models/Category');
 const Recipe = require('../models/Recipe');
 
@@ -189,7 +190,6 @@ exports.submitRecipeOnPost = async (req, res) => {
     req.flash('infoErrors', error)
     res.redirect('/submit-recipe');
   }
-
 };
 
 /**
@@ -214,5 +214,27 @@ exports.searchRecipe = async (req, res) => {
   } catch(error) {
     res.status(500).send({message: error.message || 'Error Occured'});
   }
-
 };
+
+// query to update recipe
+// async function updateRecipe() {
+//   try {
+//     // update recipe from database
+//     const response = await Recipe.updateOne({name: 'Recipe name'}, {name: 'New Recipe updated'});
+//     res.n; // Number of results matched with the search
+//     res.nModified; // Number of results modified
+//   } catch (error) {
+//     res.status(500).send({message: error.message || 'Error Occured'});
+//   }
+// };
+// updateRecipe();
+
+// query to delete recipe
+// async function deleteRecipe() {
+//   try {
+//     await Recipe.deleteOne({name: 'Recipe name'});
+//   } catch (error) {
+//     res.status(500).send({message: error.message || 'Error Occured'});
+//   }
+// };
+// deleteRecipe();
