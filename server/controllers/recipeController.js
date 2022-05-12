@@ -151,6 +151,24 @@ exports.submitRecipe = async (req, res) => {
 exports.submitRecipeOnPost = async (req, res) => {
   try {
 
+    // express file uploader
+    let imageUploadFile;
+    let uploadPath;
+    let newImageName;
+    
+    // if upload file does not exist
+    if (!req.files || Object.keys(req.files).length === 0) {
+      console.log('No files were uploaded');
+    } else {
+      imageUploadFile = req.files.image;
+      // set name to date
+      newImageName = Date.now() + imageUploadFile.name;
+      uploadPath = require('path').resolve('./') + '/public/uploads' + newImageName;
+      imageUploadFile.mv(uploadPath, function(err) {
+        if(err) return res.status(500).send(error);
+      })
+    }
+
     const newRecipe = new Recipe({
       // using the name from the field in submit-recipe
       name: req.body.name,
@@ -158,7 +176,7 @@ exports.submitRecipeOnPost = async (req, res) => {
       ingredients: req.body.ingredients,
       directions: req.body.direction,
       category: req.body.category,
-      image: 'view-all.jpg', // placeholder
+      image: newImageName,
       email: req.body.email,
     });
 
