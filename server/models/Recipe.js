@@ -3,33 +3,33 @@ const mongoose = require('mongoose');
 const recipeSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'This field is required']
+    required: [true, 'Name is required']
   },
   description: {
     type: String,
-    required: [true, 'This field is required']
+    required: [true, 'Description is required']
   },
   ingredients: {
     type: Array,
-    required: [true, 'This field is required']
+    required: [true, 'Ingredients is required']
   },
   directions: {
     type: Array,
-    required: [true, 'This field is required']
+    required: [true, 'Directions is required']
   },
   category: {
     // Array causes error
     type: String,
     enum: ['American', 'Chinese', 'French', 'Indian', 'Italian', 'Japanese', 'Mexican', 'Spanish', 'Vietnamese'],
-    required: [true, 'This field is required']
+    required: [true, 'Category is required']
   },
   image: {
     type: String,
-    required: [true, 'This field is required']
+    required: [true, 'Image is required']
   },
   email: {
     type: String,
-    required: [true, 'This field is required']
+    required: [true, 'Email is required']
   },
 });
 
