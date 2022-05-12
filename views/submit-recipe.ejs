@@ -12,6 +12,12 @@
     </div>
   <% } %>
 
+  <% if (infoErrorsObj != "") {%>
+    <div class="col-8 alert alert-danger" role="alert">
+      <%= infoErrorsObj %>
+    </div>
+  <% } %>
+
   <div class="col-8">
     <!-- multipart-form -->
     <form action="/submit-recipe" enctype="multipart/form-data" method="POST">
