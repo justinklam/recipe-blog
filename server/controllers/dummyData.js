@@ -414,10 +414,10 @@ async function insertDummyRecipeData(){
           '3 cups all-purpose flour',
           '3 tablespoons white sugar',
           '3 teaspoons baking powder',
-          '1 ½ teaspoons baking soda',
-          '¾ teaspoon salt',
+          '1 1/2 teaspoons baking soda',
+          '3/4 teaspoon salt',
           '3 cups buttermilk',
-          '½ cup milk',
+          '1/2 cup milk',
           '3 eggs',
           '1/3 cup butter, melted'
         ],
@@ -429,6 +429,28 @@ async function insertDummyRecipeData(){
           ],
         "category": "American",
         "image": "pancake.jpg",
+        "email": "user@email.com"
+      },
+      { 
+        "name": "Macaron",
+        "description": `Macaron (French Macaroon)
+        From: https://www.allrecipes.com/recipe/223234/macaron-french-macaroon/`,
+        "ingredients": [
+          '3 egg whites',
+          '1/4 cup white sugar',
+          '1 2/3 cups confectioners sugar',
+          '1 cup finely ground almonds'
+        ],
+        "directions": 
+          ['Line a baking sheet with a silicone baking mat.',
+          "Beat egg whites in the bowl of a stand mixer fitted with a whisk attachment until whites are foamy; beat in white sugar and continue beating until egg whites are glossy, fluffy, and hold soft peaks. Sift confectioners' sugar and ground almonds in a separate bowl and quickly fold the almond mixture into the egg whites, about 30 strokes.",
+          'Spoon a small amount of batter into a plastic bag with a small corner cut off and pipe a test disk of batter, about 1 1/2 inches in diameter, onto prepared baking sheet. If the disk of batter holds a peak instead of flattening immediately, gently fold the batter a few more times and retest.',
+          'When batter is mixed enough to flatten immediately into an even disk, spoon into a pastry bag fitted with a plain round tip. Pipe the batter onto the baking sheet in rounds, leaving space between the disks. Let the piped cookies stand out at room temperature until they form a hard skin on top, about 1 hour.',
+          'Preheat oven to 285 degrees F (140 degrees C).',
+          'Bake cookies until set but not browned, about 10 minutes; let cookies cool completely before filling.'
+          ],
+        "category": "French",
+        "image": "macaron.jpg",
         "email": "user@email.com"
       },
     ]);
