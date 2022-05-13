@@ -453,6 +453,164 @@ async function insertDummyRecipeData(){
         "image": "macaron.jpg",
         "email": "user@email.com"
       },
+      { 
+        "name": "Pork Belly",
+        "description": `Crispy Pork Belly
+        From: https://www.allrecipes.com/recipe/240136/crispy-pork-belly/`,
+        "ingredients": [
+          '1/2 pound whole pork belly, skin removed',
+          '1/2 teaspoon smoked paprika, or to taste',
+          'kosher salt and ground black pepper to taste',
+          '1 tablespoon olive oil, or to taste'
+        ],
+        "directions": 
+          ['Preheat oven to 200 degrees F (95 degrees C).',
+          "Season pork belly all over with smoked paprika, salt, and black pepper. Wrap pork in parchment paper; wrap a second time in aluminum foil, and a third time in another sheet of aluminum foil. Place pork packet in a baking dish.",
+          'Roast in the preheated oven until tender for 6 hours. Let cool in wrappings to room temperature; place cooled packet in refrigerator and chill for 8 hours or overnight.',
+          'Unwrap chilled meat. Save any rendered fat that falls away when unwrapping pork.',
+          'Cut meat into 6 equal-size portions. Cut 1/8-inch by 1/8-inch slashes in the fat-side of the pork. Season with salt.',
+          'Heat 2 tablespoons reserved pork fat in a skillet over medium heat. Place pork belly, fat side down, in hot fat; cook until well-browned on all sides and heated through, 5 to 10 minutes. Transfer pork belly to a plate, drizzle with olive oil and season with pepper.'
+          ],
+        "category": "Chinese",
+        "image": "pork-belly.jpg",
+        "email": "user@email.com"
+      },
+      { 
+        "name": "Ma Po Tofu",
+        "description": `Ma Po Tofu
+        From: https://www.allrecipes.com/recipe/260114/ma-po-tofu-on-rice/`,
+        "ingredients": [
+          '1 (16 ounce) package firm tofu',
+          '1 cup fat-free, reduced-sodium chicken broth',
+          '3 tablespoons chile-garlic sauce',
+          '3 tablespoons low-sodium soy sauce',
+          '2 tablespoons cornstarch',
+          '2 teaspoons Chinese black bean and garlic sauce',
+          '8 ounces lean ground pork',
+          '3 cloves garlic, minced',
+          '1 tablespoon grated fresh ginger',
+          '1/4 cup chopped green onions',
+          '3 cups hot cooked short-grain rice',
+          'ground black pepper to taste'
+        ],
+        "directions": 
+          ['Cut tofu into 4 slices. Place tofu between 2 paper towels. Let stand until paper towels have absorbed much of the liquid, about 10 minutes. Drain and cut into 1/2-inch cubes.',
+          "Whisk chicken broth, chile-garlic sauce, soy sauce, cornstarch, and black bean sauce together in a bowl.",
+          'Heat a wok or nonstick skillet over medium heat. Add pork; cook and stir until browned and crumbly, 5 to 7 minutes. Add garlic and ginger; cook, stirring constantly, until softened, about 2 minutes. Stir in the broth mixture; bring to a boil. Reduce heat to low; simmer sauce until thickened, about 2 minutes.',
+          'Toss cubed tofu into the sauce; simmer until heated through, about 2 minutes. Remove from heat; stir in green onions. Spoon ma po tofu over hot rice. Season with black pepper.'
+          ],
+        "category": "Chinese",
+        "image": "ma-po-tofu.jpg",
+        "email": "user@email.com"
+      },
+      { 
+        "name": "Chocolate Chip Cookies",
+        "description": `Chocolate Chip Cookies
+        From: https://www.allrecipes.com/recipe/25040/chocolate-chip-cookies-v/`,
+        "ingredients": [
+          '2 1/4 cups all-purpose flour',
+          '1 teaspoon baking soda',
+          '1 teaspoon salt',
+          '1 (3.3 ounce) package instant white chocolate pudding mix',
+          '1 cup butter, softened',
+          '1 cup white sugar',
+          '3/4 cup brown sugar',
+          '2 eggs',
+          '2 teaspoons vanilla extract',
+          '2 cups semisweet chocolate chips'
+        ],
+        "directions": 
+          ['Preheat the oven to 375 degrees F (190 degrees C). Stir together the flour, baking soda, salt and instant pudding powder; set aside.',
+          "In a medium bowl, cream together the butter, white sugar and brown sugar until smooth. Blend in the eggs and vanilla. Gradually mix in the dry ingredients until just blended. Stir in the chocolate chips by hand using a wooden spoon. Scoop cookies using an ice cream scoop or by heaping tablespoons. Place cookies at least 2 inches apart onto ungreased cookie sheets.",
+          'Bake for 8 to 10 minutes in the preheated oven, until lightly golden. Cool on baking sheets for a few minutes before removing to wire racks to cool completely.',
+          ],
+        "category": "American",
+        "image": "chocolate-chip-cookies.jpg",
+        "email": "user@email.com"
+      },
+      { 
+        "name": "Crème Brûlée",
+        "description": `Crème Brûlée
+        From: https://www.allrecipes.com/recipe/19165/creme-brulee/`,
+        "ingredients": [
+          '6 egg yolks',
+          '6 tablespoons white sugar, divided',
+          '1/2 teaspoon vanilla extract',
+          '2 1/2 cups heavy cream',
+          '2 tablespoons brown sugar'
+        ],
+        "directions": 
+          ['Preheat the oven to 300 degrees F (150 degrees C).',
+          "Whisk egg yolks, 4 tablespoons white sugar, and vanilla extract in a mixing bowl until thick and creamy; set aside.",
+          'Pour cream into a saucepan and stir over low heat until it almost comes to a boil. Whisk cream into egg yolk mixture; beat until combined.',
+          'Pour mixture into the top pan of a double boiler. Stir over simmering water until mixture lightly coats the back of a spoon, about 3 minutes. Pour into a shallow heat-proof dish.',
+          'Bake in the preheated oven until custard is set, about 30 minutes. Let cool to room temperature, then refrigerate until chilled, at least 1 hour or overnight.',
+          'Turn the oven to broil.',
+          'Combine remaining 2 tablespoons white sugar and brown sugar in a small bowl. Sprinkle mixture evenly over custard. Place dish under the broiler until sugar melts and caramelizes, about 2 minutes. Watch carefully so as not to burn.',
+          'Allow to cool slightly, then refrigerate until custard is set again, about 10 minutes.'
+          ],
+        "category": "French",
+        "image": "creme-brulee.jpg",
+        "email": "user@email.com"
+      },
+      { 
+        "name": "Chocolate Eclair",
+        "description": `Chocolate Eclair
+        From: https://www.allrecipes.com/recipe/19010/eclairs-ii/`,
+        "ingredients": [
+          '1/2 cup butter',
+          '1 cup water',
+          '1 cup all-purpose flour',
+          '1/4 teaspoon salt',
+          '4 eggs',
+          '1 (5 ounce) package instant vanilla pudding mix',
+          '2 1/2 cups cold milk',
+          '1 cup heavy cream',
+          '1/4 cup confectioners sugar',
+          '1 teaspoon vanilla extract',
+          '2 (1 ounce) squares semisweet chocolate',
+          '2 tablespoons butter',
+          '1 cup confectioners sugar',
+          '1 teaspoon vanilla extract',
+          '3 tablespoons hot water'
+        ],
+        "directions": 
+          ['Preheat oven to 450 degrees F (230 degrees C). Grease a cookie sheet.',
+          "In a medium saucepan, combine 1/2 cup butter and 1 cup water. Bring to a boil, stirring until butter melts completely. Reduce heat to low, and add flour and salt. Stir vigorously until mixture leaves the sides of the pan and begins to form a stiff ball. Remove from heat. Add eggs, one at a time, beating well to incorporate completely after each addition. With a spoon or a pastry bag fitted with a No. 10, or larger, tip, spoon or pipe dough onto cookie sheet in 1 1/2 x 4 inch strips.",
+          'Bake 15 minutes in the preheated oven, then reduce heat to 325 degrees F (165 degrees C) and bake 20 minutes more, until hollow sounding when lightly tapped on the bottom. Cool completely on a wire rack.',
+          'For the filling, combine pudding mix and milk in medium bowl according to package directions. In a separate bowl, beat the cream with an electric mixer until soft peaks form. Beat in 1/4 cup confectioners sugar and 1 teaspoon vanilla. Fold whipped cream into pudding. Cut tops off of cooled pastry shells with a sharp knife. Fill shells with pudding mixture and replace tops.',
+          'For the icing, melt the chocolate and 2 tablespoons butter in a medium saucepan over low heat. Stir in 1 cup confectioners sugar and 1 teaspoon vanilla. Stir in hot water, one tablespoon at a time, until icing is smooth and has reached desired consistency. Remove from heat, cool slightly, and drizzle over filled eclairs. Refrigerate until serving.'
+          ],
+        "category": "French",
+        "image": "chocolate-eclair.jpg",
+        "email": "user@email.com"
+      },
+      { 
+        "name": "Lemon Tart",
+        "description": `Lemon Tart
+        From: https://www.allrecipes.com/recipe/20384/tart-lemon-triangles/`,
+        "ingredients": [
+          '3/8 cup butter',
+          '1/4 cup confectioners sugar',
+          '1 cup all-purpose flour',
+          '3 eggs',
+          '1 cup white sugar',
+          '1 tablespoon grated lemon zest',
+          '1/4 cup lemon juice',
+          '3 tablespoons all-purpose flour',
+          '2 tablespoons confectioners sugar for dusting'
+        ],
+        "directions": 
+          ['Preheat oven to 350 degrees F (175 degrees C).',
+          "Process butter, 1/4 cup confectioners' sugar and 1 cup flour in food processor 10 seconds, or blend with pastry blender. Pat dough evenly into 9 inch round pie plate.",
+          'Bake 12 to 15 minutes, until golden.',
+          'Combine eggs, white sugar, lemon zest, lemon juice and 3 tablespoons flour and mix until smooth; pour mixture over hot crust.',
+          'Bake 15 to 20 minutes more, until firm. Let cool completely in baking dish. Sprinkle with confectioners sugar and cut into 12 triangles.'
+          ],
+        "category": "French",
+        "image": "lemon-tart.jpg",
+        "email": "user@email.com"
+      },
     ]);
   } catch(error) {
     console.log('Recipe Insert Error', + error);
