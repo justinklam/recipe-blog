@@ -5,10 +5,10 @@ const session = require('cookie-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 
+require("dotenv").config();
+
 const app = express();
 const port = normalizePort(process.env.PORT || "3000");
-
-require("dotenv").config();
 
 // middleware
 app.use(express.urlencoded({ extended: true }));
