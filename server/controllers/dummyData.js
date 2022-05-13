@@ -375,6 +375,62 @@ async function insertDummyRecipeData(){
         "image": "spring-rolls.jpg",
         "email": "user@email.com"
       },
+      { 
+        "name": "Chow Mein",
+        "description": `This stir-fry combines chicken breast, bok choy, zucchini, carrots, snap peas, and chow mein noodles in a flavorful Chinese-inspired sauce.
+        From: https://www.allrecipes.com/recipe/231308/chow-mein-with-chicken-and-vegetables/`,
+        "ingredients": [
+          '2 teaspoons soy sauce',
+          '1 teaspoon cornstarch',
+          '1/4 teaspoon sesame oil',
+          '1/2 pound skinless, boneless chicken breast halves, cut into strips',
+          '3/4 cup chicken broth',
+          '2 tablespoons oyster sauce',
+          '3/4 teaspoon white sugar',
+          '1/2 pound chow mein noodles',
+          '1 tablespoon vegetable oil',
+          '1 teaspoon minced garlic',
+          '2 heads bok choy, chopped',
+          '1/2 zucchini, diced',
+          '10 sugar snap peas',
+          '1 carrot, cut into thin strips',
+          '2 tablespoons chopped green onion'
+        ],
+        "directions": 
+          ['Whisk soy sauce, corn starch, and sesame oil together in a large bowl until smooth; add chicken strips and toss to coat. Cover and refrigerate for at least 20 minutes.',
+          'Combine chicken broth, oyster sauce, and sugar in a small bowl and set aside.',
+          'Bring a large pot of water to a boil. Add noodles and cook over medium heat until cooked through but still firm to the bite, 4 to 5 minutes. Drain and rinse with cold water.',
+          'Heat vegetable oil in a large skillet. Cook and garlic in hot oil for 30 seconds; add marinated chicken. Cook and stir until browned and no longer pink in the center, 5 to 6 minutes. Remove chicken mixture to a plate. Cook and stir bok choy, zucchini, snap peas, and carrot in the hot skillet until softened, about 2 minutes. Return noodles and chicken mixture to the skillet. Pour broth mixture into noodle mixture; cook and stir until warmed through, about 2 minutes. Serve garnished with green onions.'
+          ],
+        "category": "Chinese",
+        "image": "chow-mein.jpg",
+        "email": "user@email.com"
+      },
+      { 
+        "name": "Buttermilk Pancakes",
+        "description": `A very light and fluffy pancake recipe that requires fresh buttermilk, but it's the best I've ever made!
+        From: https://www.allrecipes.com/recipe/24530/buttermilk-pancakes-ii/`,
+        "ingredients": [
+          '3 cups all-purpose flour',
+          '3 tablespoons white sugar',
+          '3 teaspoons baking powder',
+          '1 ½ teaspoons baking soda',
+          '¾ teaspoon salt',
+          '3 cups buttermilk',
+          '½ cup milk',
+          '3 eggs',
+          '1/3 cup butter, melted'
+        ],
+        "directions": 
+          ['In a large bowl, combine flour, sugar, baking powder, baking soda, and salt. In a separate bowl, beat together buttermilk, milk, eggs and melted butter. Keep the two mixtures separate until you are ready to cook.',
+          "Heat a lightly oiled griddle or frying pan over medium high heat. You can flick water across the surface and if it beads up and sizzles, it's ready!",
+          'Pour the wet mixture into the dry mixture; use a wooden spoon or fork to mix until its just blended together. The batter will be a little lumpy which is what you want.',
+          'Pour or scoop the batter onto the preheated griddle, using approximately 1/2 cup for each pancake. Cook until bubbles appear on the surface, 1 to 2 minutes; flip with a spatula and cook until browned on the other side. Repeat with remaining batter.'
+          ],
+        "category": "American",
+        "image": "pancake.jpg",
+        "email": "user@email.com"
+      },
     ]);
   } catch(error) {
     console.log('Recipe Insert Error', + error);
