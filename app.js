@@ -8,7 +8,8 @@ const flash = require('connect-flash');
 require("dotenv").config();
 
 const app = express();
-const port = normalizePort(process.env.PORT || "3000");
+// const port = normalizePort(process.env.PORT || "3000");
+const port = normalizePort(process.env.PORT);
 
 // middleware
 app.use(express.urlencoded({ extended: true }));
