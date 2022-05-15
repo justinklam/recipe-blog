@@ -52,6 +52,19 @@ exports.homepage = async (req, res) => {
 };
 
 /**
+ * GET /contact
+ * Contact
+ */
+
+ exports.contact = async (req, res) => {
+  try {
+    res.render("contact", {title: 'Recipe Repo - Contact'});
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
+};
+
+/**
  * GET /categories
  * Categories
  */
