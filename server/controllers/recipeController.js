@@ -39,6 +39,19 @@ exports.homepage = async (req, res) => {
 };
 
 /**
+ * GET /about
+ * About
+ */
+
+ exports.about = async (req, res) => {
+  try {
+    res.render("about", {title: 'Recipe Repo - About'});
+  } catch(error) {
+    res.status(500).send({message: error.message || 'Error Occured'});
+  }
+};
+
+/**
  * GET /categories
  * Categories
  */
