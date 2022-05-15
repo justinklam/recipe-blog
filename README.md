@@ -2,8 +2,8 @@
 
 ## Description
 
-<p>Send in and view your recipes online with <b>Recipe Repo!</b></p>
-<p>Full-stack application built using JavaScript, Express, Node, Bootstrap, EJS and MongoDB</p>
+<p>Post and view your recipes online with <b>Recipe Repo!</b></p>
+<p>Full-stack application built using JavaScript, Express, NodeJS, Bootstrap, EJS and MongoDB.</p>
 
 ## Preview
 
@@ -23,6 +23,7 @@ Core:
 - JavaScript
 - Node.JS
 - Express
+- Bootstrap
 - EJS
 - MongoDB
 - Mongoose
@@ -30,11 +31,10 @@ Core:
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, open the app with:
 
 ### `npm start`
 
-Runs the app with nodemon.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
