@@ -11,6 +11,8 @@
 <img src="./public/img/screenshots/main.png" height="500" style="border-radius:10px;margin-bottom:1rem;" />
 <p>Main Page Continued</p>
 <img src="./public/img/screenshots/main-lower.png" height="500" style="border-radius:10px;margin-bottom:1rem;" />
+<p>Submission Form</p>
+<img src="./public/img/screenshots/submit-recipes.png" height="500" style="border-radius:10px;margin-bottom:1rem;" />
 <p>Latest Recipes</p>
 <img src="./public/img/screenshots/explore-latest.png" height="500" style="border-radius:10px;margin-bottom:1rem;" />
 <p>Explore Categories</p>
