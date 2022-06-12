@@ -11,13 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/justinklam/recipe-blog.git"
   },
-  "author": "",
+  "author": "Justin Lam",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/justinklam/recipe-blog/issues"
   },
   "homepage": "https://github.com/justinklam/recipe-blog#readme",
-  "description": "",
+  "description": "Recipe blog where users can upload and submit recipes",
   "dependencies": {
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
