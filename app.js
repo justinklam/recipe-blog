@@ -1,6 +1,8 @@
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const fileUpload = require('express-fileupload');
+
+// Middleware
 const session = require('cookie-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
@@ -8,9 +10,10 @@ const flash = require('connect-flash');
 require("dotenv").config();
 
 const app = express();
+// Port
 const port = normalizePort(process.env.PORT || "3000");
 
-// middleware
+// Middleware Use
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public")); // for static files
 app.use(expressLayouts);
@@ -23,11 +26,11 @@ app.use(session({
 app.use(flash());
 app.use(fileUpload());
 
-// views
+// Views
 app.set("layout", "./layouts/main");
 app.set("view engine", "ejs");
 
-// routes
+// Routes
 const routes = require("./server/routes/recipeRoutes.js");
 app.use("/", routes);
 
