@@ -1,5 +1,7 @@
 require ('../models/database');
 const res = require('express/lib/response');
+
+// Models
 const Category = require('../models/Category');
 const Recipe = require('../models/Recipe');
 
